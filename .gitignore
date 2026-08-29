@@ -1,0 +1,31 @@
+# ============================================
+# STC8 (8051) 嵌入式项目（Keil C51 / SDCC / PlatformIO）
+# ============================================
+
+# Keil C51
+\Objects/
+\Listings/
+*.uvguix.*
+*.bak
+*.uvopt
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/.browse.c_cpp.db*
+
+# 编译产物
+*.o
+*.obj
+*.hex
+*.bin
+*.lst
+*.map
+*.axf
+*.elf
+*.d
+
+# 系统
+.DS_Store
+Thumbs.db
