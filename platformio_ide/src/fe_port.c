@@ -1,3 +1,7 @@
+/* FasterEdge 开源项目
+ * GitHub: https://github.com/FasterEdge
+ * Gitee:  https://gitee.com/FasterEdge
+ */
 // fe_port.c — FasterEdge MCU 平台移植层（STC8 (8051 增强 1T) 版，SDCC 工具链）
 // 用于 platformio_ide 工程（VS Code + PlatformIO 插件，STC 平台 + SDCC）：
 //   platform = stc
