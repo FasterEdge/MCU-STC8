@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// FasterEdge 开源项目
+// Github: https://github.com/FasterEdge
+// Gitee:  https://gitee.com/FasterEdge
+// ─────────────────────────────────────────────────────────────
 // fe_port.c — FasterEdge MCU 平台移植层实现（STC8 (8051 增强 1T) 版，Keil C51 工具链）
 // 目标芯片：STC8H8K64U（uvproj Device）。内置 EEPROM（IAP，寄存器 0xC2-0xC7）。
 #include "fe_port.h"

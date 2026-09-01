@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// FasterEdge 开源项目
+// Github: https://github.com/FasterEdge
+// Gitee:  https://gitee.com/FasterEdge
+// ─────────────────────────────────────────────────────────────
 // data_base.c — BaseData 实现（STC8 (8051 增强 1T) 版）
 // logo / info
 #include "fe_data.h"
