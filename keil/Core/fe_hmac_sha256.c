@@ -1,3 +1,4 @@
+// FasterEdge 开源项目 - Github: https://github.com/FasterEdge - Gitee: https://gitee.com/FasterEdge
 // fe_hmac_sha256.c — HMAC-SHA256 纯 C 实现（零依赖，STC8 (8051 增强 1T) 版）
 #include "fe_hmac_sha256.h"
 #include <string.h>

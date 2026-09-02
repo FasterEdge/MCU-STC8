@@ -1,3 +1,4 @@
+// FasterEdge 开源项目 - Github: https://github.com/FasterEdge - Gitee: https://gitee.com/FasterEdge
 // register.c — 注册全部 Data / Ability 到全局 Atom（STC8 (8051 增强 1T) 版）
 // 注意：C51 对 C99 复合字面量支持有限，模块全部用显式静态变量。
 #include "fe.h"

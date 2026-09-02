@@ -1,3 +1,4 @@
+// FasterEdge 开源项目 - Github: https://github.com/FasterEdge - Gitee: https://gitee.com/FasterEdge
 // data_chip.c — ChipData 实现（STC8 (8051 增强 1T) 版，MCU 专有）
 // MCU 专有 Data：芯片信息（平台差异由 fe_port 提供）。
 //   info   返回芯片型号 / 内核 / 频率 / RAM / Flash 等

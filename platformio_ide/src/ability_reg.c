@@ -1,3 +1,4 @@
+// FasterEdge 开源项目 - Github: https://github.com/FasterEdge - Gitee: https://gitee.com/FasterEdge
 // ability_reg.c — RegAbility 实现（STC8 (8051 增强 1T) 版，MCU 专有）
 // MCU 专有能力：SFR / XRAM 读写。
 //   read_sfr <0x80-0xFF>       读特殊功能寄存器
