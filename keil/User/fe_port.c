@@ -295,18 +295,25 @@ static void iap_erase(u16 addr) {
     iap_idle();
 }
 
-// 写 N 字节到同一扇区：读回扇区、改字节、擦除、重写
+// 写 N 字节(跨扇区安全): 按扇区读-改-写直到 N 字节写完。旧实现单扇区
+// 截断(off+i<SECTOR), 槽 10 value(0x1F0)跨 512B 扇区边界时后半丢失。
 static u8 iap_write_sector(u16 addr, const u8 *src, u16 n) {
     u16 base = (u16)(addr & (u16)~(FE_IAP_SECTOR - 1));
-    u16 i, off = (u16)(addr - base);
+    u16 off = (u16)(addr - base);
+    u16 si = 0;
     u8 xdata page[FE_IAP_SECTOR];
-    for (i = 0; i < FE_IAP_SECTOR; i++)
-        page[i] = iap_read((u16)(base + i));
-    for (i = 0; i < n && off + i < FE_IAP_SECTOR; i++)
-        page[off + i] = src[i];
-    iap_erase(base);
-    for (i = 0; i < FE_IAP_SECTOR; i++)
-        iap_write((u16)(base + i), page[i]);
+    while (si < n) {
+        u16 i;
+        for (i = 0; i < FE_IAP_SECTOR; i++)
+            page[i] = iap_read((u16)(base + i));
+        for (i = 0; off + i < FE_IAP_SECTOR && si < n; i++)
+            page[off + i] = src[si++];
+        iap_erase(base);
+        for (i = 0; i < FE_IAP_SECTOR; i++)
+            iap_write((u16)(base + i), page[i]);
+        base = (u16)(base + FE_IAP_SECTOR);
+        off = 0;
+    }
     return TRUE;
 }
 
